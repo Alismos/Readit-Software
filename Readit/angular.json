@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Readit"
+    }
+  },
+  "defaultProject": "Readit",
+  "cli": {
+    "analytics": "a70a78e6-1ac7-4abd-bd71-a4ffa122502b"
+  }
 }
