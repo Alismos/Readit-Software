@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 <<<<<<< HEAD
 =======
 import { ConexionService } from 'src/app/services/conexion.service';
->>>>>>> master
 
 @Component({
   selector: 'app-lista',
@@ -11,9 +10,6 @@ import { ConexionService } from 'src/app/services/conexion.service';
 })
 export class ListaComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor() { }
-=======
   items:any;
 
   constructor(private conexion: ConexionService) {
@@ -21,7 +17,6 @@ export class ListaComponent implements OnInit {
       this.items = item;
     })
    }
->>>>>>> master
 
   ngOnInit(): void {
   }
