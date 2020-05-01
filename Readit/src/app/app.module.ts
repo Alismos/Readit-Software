@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,11 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ListaComponent } from './components/lista/lista.component';
 import { ListaAddComponent } from './components/lista-add/lista-add.component';
 
+//Importando servicio
+import { ConexionService } from './services/conexion.service';
+import { ListaComponent } from './components/lista/lista.component';
+import { ListaAddComponent } from './components/lista-add/lista-add.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +26,14 @@ import { ListaAddComponent } from './components/lista-add/lista-add.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [ConexionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
