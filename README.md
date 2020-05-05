@@ -9,7 +9,6 @@ Aplicación web versátil de envíos para trabajadores de centros comerciales
 - cd Readit-Software/Readit
 - npm install @angular/cli (para installar los paquetes necesarios del cliente Angular).
 - ng serve -o
-- Abrir http://localhost:4200/
 
 Si ocurren algunos errores con la ejecución puedes obtener aydua [aqui](https://github.com/angular/angular-cli/issues/16868).
 
