@@ -16,11 +16,24 @@ import { ConexionService } from './services/conexion.service';
 import { ListaComponent } from './components/lista/lista.component';
 import { ListaAddComponent } from './components/lista-add/lista-add.component';
 
+
+//Rutas
+
+import { app_routing } from './app.routes';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { RestaurantesComponent } from './components/restaurantes/restaurantes.component';
+import { PedidoComponent } from './components/pedido/pedido.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
-    ListaAddComponent
+    ListaAddComponent,
+    InicioComponent,
+    ContactoComponent,
+    RestaurantesComponent,
+    PedidoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +42,8 @@ import { ListaAddComponent } from './components/lista-add/lista-add.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    app_routing
   ],
   providers: [ConexionService],
   bootstrap: [AppComponent]
