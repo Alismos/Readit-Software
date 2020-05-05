@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 //Importando servicios de Firebse para el store
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
 
@@ -14,6 +14,7 @@ export class ConexionService {
 
   private itemsCollection: AngularFirestoreCollection<Item>;
   items: Observable<Item[]>;
+  private itemDoc: AngularFirestoreDocument<Item>;
 
   constructor(private afs: AngularFirestore) {
     this.itemsCollection = afs.collection<Item>('items');
@@ -32,5 +33,14 @@ export class ConexionService {
 
    agregarItem(item: Item){
      this.itemsCollection.add(item);
+   }
+
+   eliminarItem(item){
+    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
+    this.itemDoc.delete();
+   }
+   EditarItem(item){
+    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
+    this.itemDoc.update(item);
    }
 }
