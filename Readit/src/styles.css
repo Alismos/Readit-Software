@@ -10,4 +10,38 @@ body{
   height: 100vh;
 }
 
-.big-container{}
+.textContainer{
+  /* Texto*/
+  text-indent: 15px;
+  font-size: 20px;
+  font-style:Arial;
+  line-height: 300%;
+
+  /* Dimesiones del container*/
+  margin-left: 0px;
+  width: 70%;
+  height: 50%;
+  line-height: normal;
+
+  background-color: aliceblue;
+  border-radius: 23px 23px 23px 23px;
+-moz-border-radius: 23px 23px 23px 23px;
+-webkit-border-radius: 23px 23px 23px 23px;
+border: 2px solid #262626;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: calc(100% - 4rem);
+}
+.footer {
+  height: 4rem;
+  background-color: #e2e2e2
+}
+
+.foto1 { padding: 10px; margin: 10px; border: 2px solid black; float: right; width: 250px; }
