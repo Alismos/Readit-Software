@@ -6,7 +6,7 @@ import { PedidoComponent } from './components/pedido/pedido.component';
 import { RouterModule, Routes } from '@angular/router';
 
 
-const app_routes: Routes = [
+const approutes: Routes = [
   { path: 'inicio', component: InicioComponent},
   { path: 'contacto', component: ContactoComponent},
   { path: 'restaurantes', component: RestaurantesComponent},
@@ -14,4 +14,4 @@ const app_routes: Routes = [
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
-export const app_routing = RouterModule.forRoot(app_routes);
+export const approuting = RouterModule.forRoot(approutes);

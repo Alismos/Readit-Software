@@ -8,10 +8,10 @@ import { ConexionService } from 'src/app/services/conexion.service';
 })
 export class ListaAddComponent implements OnInit {
 
-  item:any = {
-    Name:'',
+  item: any = {
+    Name: '',
     Age: 0
-  }
+  };
   constructor(private servicio: ConexionService) { }
 
   ngOnInit(): void {
@@ -24,3 +24,4 @@ export class ListaAddComponent implements OnInit {
   }
 
 }
+
