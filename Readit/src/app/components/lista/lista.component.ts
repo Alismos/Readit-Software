@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { ConexionService } from 'src/app/services/conexion.service';
 
 @Component({
