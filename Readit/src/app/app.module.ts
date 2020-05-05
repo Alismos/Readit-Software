@@ -4,26 +4,39 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 // Importando servicios de angular
+=======
+/*Importando servicios de angular*/
+>>>>>>> origin/master
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+<<<<<<< HEAD
 // Importando servicio
+=======
+/*Importando servicio*/
+>>>>>>> origin/master
 import { ConexionService } from './services/conexion.service';
 import { ListaComponent } from './components/lista/lista.component';
 import { ListaAddComponent } from './components/lista-add/lista-add.component';
 
 
+<<<<<<< HEAD
 // Rutas
+=======
+/*Rutas*/
+>>>>>>> origin/master
 
 import { approuting } from './app.routes';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { RestaurantesComponent } from './components/restaurantes/restaurantes.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
+import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +46,8 @@ import { PedidoComponent } from './components/pedido/pedido.component';
     InicioComponent,
     ContactoComponent,
     RestaurantesComponent,
-    PedidoComponent
+    PedidoComponent,
+    PiePaginaComponent
   ],
   imports: [
     BrowserModule,
