@@ -7,7 +7,7 @@ Aplicación web versátil de envíos para trabajadores de centros comerciales
 ### Prerequisitos para trabajo local
 - Git clone https://github.com/Alismos/Readit-Software.git
 - cd Readit-Software/Readit
-- nmp install @angular/cli (para installar los paquetes necesarios del cliente Angular).
+- npm install @angular/cli (para installar los paquetes necesarios del cliente Angular).
 - ng serve -o
 - Abrir http://localhost:4200/
 
