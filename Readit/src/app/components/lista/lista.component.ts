@@ -8,16 +8,16 @@ import { ConexionService } from 'src/app/services/conexion.service';
 })
 export class ListaComponent implements OnInit {
 
-  items:any;
-  editarItem:any = {
+  items: any;
+  editarItem: any = {
     Name: '',
     Age: ''
-  }
+  };
 
   constructor(private conexion: ConexionService) {
-    this.conexion.listaItems().subscribe(item=>{
+    this.conexion.listaItems().subscribe(item => {
       this.items = item;
-    })
+    });
    }
 
   ngOnInit(): void {

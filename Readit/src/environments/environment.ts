@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyB4p8bD--BBToxAxpR7b65pkN8bwoLtzZg",
-    authDomain: "ingeniera-software---readit.firebaseapp.com",
-    databaseURL: "https://ingeniera-software---readit.firebaseio.com",
-    projectId: "ingeniera-software---readit",
-    storageBucket: "ingeniera-software---readit.appspot.com",
-    messagingSenderId: "186709366442",
-    appId: "1:186709366442:web:fd3fd2e300f8b25364e2d3",
-    measurementId: "G-71ZJDHQ9QN"
+    apiKey: 'AIzaSyB4p8bD--BBToxAxpR7b65pkN8bwoLtzZg',
+    authDomain: 'ingeniera-software---readit.firebaseapp.com',
+    databaseURL: 'https://ingeniera-software---readit.firebaseio.com',
+    projectId: 'ingeniera-software---readit',
+    storageBucket: 'ingeniera-software---readit.appspot.com',
+    messagingSenderId: '186709366442',
+    appId: '1:186709366442:web:fd3fd2e300f8b25364e2d3',
+    measurementId: 'G-71ZJDHQ9QN'
   }
 };
 

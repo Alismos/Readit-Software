@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-//Importando servicios de Firebse para el store
+// Importando servicios de Firebse para el store
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 
 
-export interface Item {Name : string; Age : number; }
+export interface Item {Name: string; Age: number; }
 
 @Injectable({
   providedIn: 'root'
