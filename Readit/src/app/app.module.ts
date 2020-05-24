@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Importando servicio
 import { ConexionService } from './services/conexion.service';
@@ -25,6 +26,9 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { RestaurantesComponent } from './components/restaurantes/restaurantes.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component';
+import { ImagesComponent } from './images/images.component';
+import { ImageComponent } from './images/image/image.component';
+import { ImageListComponent } from './images/image-list/image-list.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
 
 @NgModule({
@@ -47,6 +51,7 @@ import { ArticulosComponent } from './components/articulos/articulos.component';
     AngularFireStorageModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
+    ReactiveFormsModule,
     approuting
   ],
   providers: [ConexionService],
