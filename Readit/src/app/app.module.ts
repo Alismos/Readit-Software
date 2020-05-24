@@ -35,7 +35,7 @@ import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component
     ContactoComponent,
     RestaurantesComponent,
     PedidoComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
   ],
   imports: [
     BrowserModule,
