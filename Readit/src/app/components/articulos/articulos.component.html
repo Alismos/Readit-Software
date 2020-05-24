@@ -1,1 +1,11 @@
-<p>articulos works!</p>
+
+<h2> Menu : </h2>
+
+<div  class="alert alert-warning" role="alert"  *ngFor="let articulo of menus">
+    <h3>
+        <a [title]="articulo.Nombre + ' Menu'">
+          {{articulo.Nombre}}
+          </a>
+    </h3>
+    <img src={{articulo.Url}} width="450" height="450"/>
+ </div>

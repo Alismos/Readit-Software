@@ -1,16 +1,11 @@
 <h2>Restaurantes</h2>
 <div  class="alert alert-warning" role="alert"  *ngFor="let restaurante of restaurantes; index as restauranteNombre">
    <h3>
-<<<<<<< HEAD
        <a [title]="restaurante.Nombre + ' Menu'"  [routerLink]="['/restaurantes/articulos',restauranteNombre]">
          {{restaurante.Nombre}}
-=======
-       <a [title]="restaurante.Nombre + ' Menu'" [routerLink]="['articulos']">
-         {{restaurante.Nombre}} 
->>>>>>> origin/master
          </a>
    </h3>
-   <img src={{restaurante.url}} width="30">
+   <img src={{restaurante.url}} width="450" height="450"/>
    <p *ngIf="restaurante.Descripcion">
     Descripcion: {{restaurante.Descripcion}}
   </p>

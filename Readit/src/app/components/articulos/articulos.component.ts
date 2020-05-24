@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConexionService } from 'src/app/services/conexion.service';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-articulos',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticulosComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  menus: any;
+  constructor(private conexion: ConexionService) { 
+    this.conexion.menuLista().subscribe(menu => {
+      this.menus = menu;
+    })
+  }
+
+  ngOnInit(): void { 
   }
 
 }
