@@ -1,2 +1,16 @@
-<h2>Lista Restaurantes</h2>
+<h2>Restaurantes</h2>
+<div  class="alert alert-warning" role="alert"  *ngFor="let restaurante of restaurantes">
+   <h3>
+       <a [title]="restaurante.Nombre + ' Menu'" [routerLink]="['articulos']">
+         {{restaurante.Nombre}}
+         </a>
+   </h3>
+   <p *ngIf="restaurante.Descripcion">
+    Descripcion: {{restaurante.Descripcion}}
+  </p>
+  
+  <button (click)="share()">
+    Share
+  </button>
 
+</div>

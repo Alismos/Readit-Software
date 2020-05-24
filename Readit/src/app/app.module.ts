@@ -25,6 +25,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { RestaurantesComponent } from './components/restaurantes/restaurantes.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component';
+import { ArticulosComponent } from './components/articulos/articulos.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component
     RestaurantesComponent,
     PedidoComponent,
     PiePaginaComponent,
+    ArticulosComponent,
   ],
   imports: [
     BrowserModule,
