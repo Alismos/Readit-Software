@@ -29,6 +29,7 @@ import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component
 import { ImagesComponent } from './images/images.component';
 import { ImageComponent } from './images/image/image.component';
 import { ImageListComponent } from './images/image-list/image-list.component';
+import { ArticulosComponent } from './components/articulos/articulos.component';
 
 @NgModule({
   declarations: [
@@ -40,9 +41,7 @@ import { ImageListComponent } from './images/image-list/image-list.component';
     RestaurantesComponent,
     PedidoComponent,
     PiePaginaComponent,
-    ImagesComponent,
-    ImageComponent,
-    ImageListComponent,
+    ArticulosComponent,
   ],
   imports: [
     BrowserModule,
