@@ -1,17 +1,17 @@
 <h2>Restaurantes</h2>
-<div  id="Parent" class="alert alert-warning" role="alert"  *ngFor="let restaurante of restaurantes">
+<div  id="Parent" class="alert alert-warning" role="alert"  *ngFor="let restaurante of restaurantes; index as restauranteNombre">
    <div id="imageDiv">
      <img src={{restaurante.url}}>
    </div>
     <h3>
-      <a [title]="restaurante.Nombre + ' Menu'" [routerLink]="['/articulos', restauranteNombre]">
+      <a [title]="restaurante.Nombre + ' Menu'" [routerLink]="['/restaurantes/articulos',restauranteNombre]">
         {{restaurante.Nombre}} 
       </a>
     </h3>
     <p *ngIf="restaurante.Descripcion">
       {{restaurante.Descripcion}}
     </p>
-  <button (click)="share()" Margin="10">
+  <button (click)="share()">
     Share
   </button>
 </div>

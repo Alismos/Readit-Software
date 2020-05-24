@@ -12,7 +12,7 @@ const approutes: Routes = [
   { path: 'contacto', component: ContactoComponent},
   { path: 'restaurantes', component: RestaurantesComponent},
   { path: 'pedido', component: PedidoComponent},
-  { path: 'articulos/:restauranteNombre', component: ArticulosComponent},
+  { path: 'restaurantes/articulos/:restauranteNombre', component: ArticulosComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
