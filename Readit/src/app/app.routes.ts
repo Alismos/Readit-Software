@@ -4,6 +4,7 @@ import { RestaurantesComponent } from './components/restaurantes/restaurantes.co
 import { PedidoComponent } from './components/pedido/pedido.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { ArticulosComponent } from './components/articulos/articulos.component';
 
 
 const approutes: Routes = [
@@ -11,6 +12,7 @@ const approutes: Routes = [
   { path: 'contacto', component: ContactoComponent},
   { path: 'restaurantes', component: RestaurantesComponent},
   { path: 'pedido', component: PedidoComponent},
+  { path: 'restaurantes/articulos/:restauranteNombre', component: ArticulosComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

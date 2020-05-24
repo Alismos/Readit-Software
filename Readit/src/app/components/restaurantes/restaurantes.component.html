@@ -1,7 +1,7 @@
 <h2>Restaurantes</h2>
-<div  class="alert alert-warning" role="alert"  *ngFor="let restaurante of restaurantes">
+<div  class="alert alert-warning" role="alert"  *ngFor="let restaurante of restaurantes; index as restauranteNombre">
    <h3>
-       <a [title]="restaurante.Nombre + ' Menu'" [routerLink]="['articulos']">
+       <a [title]="restaurante.Nombre + ' Menu'"  [routerLink]="['/restaurantes/articulos',restauranteNombre]">
          {{restaurante.Nombre}}
          </a>
    </h3>
