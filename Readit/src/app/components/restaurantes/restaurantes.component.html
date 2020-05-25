@@ -1,17 +1,26 @@
 <h2>Restaurantes</h2>
-<div  class="alert alert-warning" role="alert"  *ngFor="let restaurante of restaurantes; index as restauranteNombre">
-   <h3>
-       <a [title]="restaurante.Nombre + ' Menu'"  [routerLink]="['/restaurantes/articulos',restauranteNombre]">
-         {{restaurante.Nombre}}
-         </a>
-   </h3>
-   <img src={{restaurante.url}} width="450" height="450"/>
-   <p *ngIf="restaurante.Descripcion">
-    Descripcion: {{restaurante.Descripcion}}
-  </p>
-  
+<div  id="Parent" class="alert alert-warning" role="alert"  *ngFor="let restaurante of restaurantes; index as restauranteNombre">
+   <div id="imageDiv">
+     <img src={{restaurante.url}}>
+   </div>
+    <h3>
+      <a [title]="restaurante.Nombre + ' Menu'" [routerLink]="['/restaurantes/articulos',restauranteNombre]">
+        {{restaurante.Nombre}} 
+      </a>
+    </h3>
+    <p *ngIf="restaurante.Descripcion">
+      {{restaurante.Descripcion}}
+    </p>
   <button (click)="share()">
     Share
   </button>
-
 </div>
+
+<style>
+  #imageDiv {
+    margin-right: 40px;
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+</style>
