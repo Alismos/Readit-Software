@@ -11,7 +11,7 @@ import { from } from 'rxjs';
   styleUrls: ['./articulos.component.css']
 })
 export class ArticulosComponent implements OnInit {
-  public href: number = 0;
+  public href: string = "";
 
   menus: any;
 
@@ -24,7 +24,8 @@ export class ArticulosComponent implements OnInit {
 
   ngOnInit(): void { 
     var r = (this.router.url).split("/");
-    this.href = parseInt(r[3]);
+    console.log(this.router.url);
+    this.href = r[3];
     console.log(this.href);
   }
   
