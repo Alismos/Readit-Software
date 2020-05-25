@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 
 export interface Item {Name: string; Age: number; }
 export interface Restaurante {Nombre: string; Descripcion: string; url: string;}
+export interface Menu {Nombre: string; Url: string; index: Int16Array;}
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +21,13 @@ export class ConexionService {
   private restauranteCollection: AngularFirestoreCollection<Restaurante>;
   restaurantes: Observable<Restaurante[]>;
 
+  private menuCollection: AngularFirestoreCollection<Menu>;
+  menus: Observable<Menu[]>;
+
   constructor(private afs: AngularFirestore) {
     this.itemsCollection = afs.collection<Item>('items');
     this.restauranteCollection =afs.collection<Restaurante>('restaurantes');
+    this.menuCollection = afs.collection<Menu>('menu');
 
     this.items = this.itemsCollection.snapshotChanges().map(actions => {
       return actions.map(a => {
@@ -39,6 +44,13 @@ export class ConexionService {
         return { id, ...data};
       });
     });
+    this.menus = this.menuCollection.snapshotChanges().map(actions => {
+      return actions.map(a => {
+        const data = a.payload.doc.data() as Menu;
+        const id = a.payload.doc.id;
+        return { id, ...data};
+      });
+    });
 
    }
 
@@ -48,6 +60,10 @@ export class ConexionService {
 
    restaurantesLista(){
      return this.restaurantes;
+   }
+
+   menuLista(){
+     return this.menus;
    }
 
    agregarItem(item: Item){

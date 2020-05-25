@@ -1,23 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionService } from 'src/app/services/conexion.service';
 import { Router } from '@angular/router'
+import { from } from 'rxjs';
 
 @Component({
-
   template: 'The href is: {{href}}',
   selector: 'app-articulos',
   templateUrl: './articulos.component.html',
   styleUrls: ['./articulos.component.css']
 })
 export class ArticulosComponent implements OnInit {
+  public href: number = 0;
 
-  public href: string="";
+  menus: any;
+  constructor(private conexion: ConexionService, private router: Router) { 
+    this.conexion.menuLista().subscribe(menu => {
+      this.menus = menu;
+    })
+  }
 
-  constructor(private router: Router){}
+  ngOnInit(): void { 
+    var r = (this.router.url).split("/");
+    this.href = parseInt(r[3]);
+    console.log(this.href);
+  }
 
-  ngOnInit(): void {
-    this.href = this.router.url;
-    console.log(this.router.url);
+  /**
+   * index
+i   */
+  public index(i, p) {
+    if(i==p){
+      return true;
+    }
+    return false;
   }
 
 }
