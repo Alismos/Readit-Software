@@ -5,6 +5,7 @@ import { PedidoComponent } from './components/pedido/pedido.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { ArticulosComponent } from './components/articulos/articulos.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 
 const approutes: Routes = [
@@ -13,6 +14,7 @@ const approutes: Routes = [
   { path: 'restaurantes', component: RestaurantesComponent},
   { path: 'pedido', component: PedidoComponent},
   { path: 'restaurantes/articulos/:restauranteNombre', component: ArticulosComponent},
+  { path: 'carrito', component: CarritoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

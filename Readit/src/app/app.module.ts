@@ -30,6 +30,7 @@ import { ImagesComponent } from './images/images.component';
 import { ImageComponent } from './images/image/image.component';
 import { ImageListComponent } from './images/image-list/image-list.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ArticulosComponent } from './components/articulos/articulos.component';
     PedidoComponent,
     PiePaginaComponent,
     ArticulosComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,

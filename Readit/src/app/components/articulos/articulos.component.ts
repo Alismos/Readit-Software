@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionService } from 'src/app/services/conexion.service';
+import {CarritoService } from 'src/app/services/carrito.service'
 import { Router } from '@angular/router'
 import { from } from 'rxjs';
 
@@ -13,7 +14,9 @@ export class ArticulosComponent implements OnInit {
   public href: string = "";
 
   menus: any;
-  constructor(private conexion: ConexionService, private router: Router) { 
+
+  constructor(private conexion: ConexionService, private carritoService: CarritoService, private router: Router) { 
+ 
     this.conexion.menuLista().subscribe(menu => {
       this.menus = menu;
     })
@@ -25,4 +28,19 @@ export class ArticulosComponent implements OnInit {
     this.href = r[3];
     console.log(this.href);
   }
+  
+  addToCart(menu){
+    this.carritoService.addtoCart(menu)
+    window.alert('Se añadio al carrito')
+  }
+  /**
+   * index
+i   */
+  public index(i, p) {
+    if(i==p){
+      return true;
+    }
+    return false;
+  }
+
 }
