@@ -23,12 +23,15 @@ export class ArticulosComponent implements OnInit {
   }
 
   ngOnInit(): void { 
-    console.log(this.carritoService.getItems())
     var r = (this.router.url).split("/");
     this.href = parseInt(r[3]);
     console.log(this.href);
   }
-
+  
+  addToCart(menu){
+    this.carritoService.addtoCart(menu)
+    window.alert('Se añadio al carrito')
+  }
   /**
    * index
 i   */

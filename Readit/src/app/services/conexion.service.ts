@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 
 export interface Item {Name: string; Age: number; }
 export interface Restaurante {Nombre: string; Descripcion: string; url: string;}
-export interface Menu {Nombre: string; Url: string; index: Int16Array;}
+export interface Menu {Nombre: string; Url: string; index: number; precio: number}
 
 @Injectable({
   providedIn: 'root'
