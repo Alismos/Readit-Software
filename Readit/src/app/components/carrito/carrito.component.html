@@ -1,5 +1,24 @@
 <h3>Cart</h3>
 
-<div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.Nombre }}</span>
+<div  id="Parent" class="alert alert-warning" role="alert" *ngFor="let item of items">
+    <div id="imageDiv">
+        <img src={{item.Url}}>
+      </div>
+       <h3>
+        <a [title]="item.Nombre">
+            {{item.Nombre}}
+        </a>
+       </h3>
+       <p *ngIf="item.precio">
+        {{item.precio}}
+      </p>
+      
+<style>
+    #imageDiv {
+      margin-right: 40px;
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
+  </style>
 </div>
