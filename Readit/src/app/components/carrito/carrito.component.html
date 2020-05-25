@@ -1,5 +1,39 @@
-<h3>Cart</h3>
+<h3>Tu Carro</h3>
 
-<div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.Nombre }}</span>
+<div  id="Parent" class="alert alert-warning" role="alert" *ngFor="let item of items">
+    <div id="imageDiv">
+        <img src={{item.Url}}>
+      </div>
+       <h3>
+        <a [title]="item.Nombre">
+            {{item.Nombre}}
+        </a>
+       </h3>
+       <p *ngIf="item.precio">
+        {{item.precio | currency }} COP
+      </p>
+      
+<style>
+    #imageDiv {
+      margin-right: 40px;
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
+  </style>
 </div>
+
+<form (ngSubmit)="agregar()">
+    <input 
+    type="text" placeholder="Ingresa tu nombre" 
+    name="Name" class="form-control"
+    [(ngModel)] = "pedido.Name">
+    <input 
+    type="number" placeholder="Ingresa tu Edad" 
+    name="Age" class="form-control"
+    [(ngModel)] = "pedido.Age">
+    <button class="btn btn-warning mt-3" type="submit">
+        Agregar
+    </button>
+</form>
+
