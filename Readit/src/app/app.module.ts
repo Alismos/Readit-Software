@@ -18,6 +18,7 @@ import { ConexionService } from './services/conexion.service';
 import { ListaComponent } from './components/lista/lista.component';
 import { ListaAddComponent } from './components/lista-add/lista-add.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 // Rutas
 
@@ -33,6 +34,8 @@ import { ImageListComponent } from './images/image-list/image-list.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { LogComponent } from './components/log/log.component';
+import { HeaderComponent } from './components/header/header.component';
+import { RegisterComponent } from './components/user/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +49,8 @@ import { LogComponent } from './components/log/log.component';
     ArticulosComponent,
     CarritoComponent,
     LogComponent,
+    HeaderComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +62,7 @@ import { LogComponent } from './components/log/log.component';
     AngularFirestoreModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatIconModule,
     approuting
   ],
   providers: [

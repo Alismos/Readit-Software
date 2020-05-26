@@ -1,1 +1,48 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #28a851;">
+
+  <!-- Logo de la pag, y ruta de direccion (La ruta de direccion es inicio en el arreglo de routerLink)-->
+    <a class="navbar-brand" [routerLink]="['inicio']"> <a class="navbar-brand" [routerLink]="['incio']">
+      <img src="assets/img/Logo4.png" width="120" height=120 alt="">
+    </a></a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Boton de inicio, font size es el tamaño  de la letra-->
+      <ul  class="navbar-nav mr-auto">
+        <button mat-raised-button style="background-color: #f5ff3d">
+          <a class="nav-link" [routerLink]="['inicio']"><FONT SIZE=5> Inicio</FONT></a>
+        </button>
+
+        <!-- Boton de pedido-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" [routerLink]="['pedido']" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <FONT SIZE=5> Pedido</FONT>
+          </a>
+          <!-- Opciones de desplegable-->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">O1</a>
+            <a class="dropdown-item" href="#">O2</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Ayuda</a>
+          </div>
+        </li>
+
+        <!-- Boton de restaurantes-->
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link"  [routerLink]="['restaurantes']"><FONT SIZE=5> Restaurantes</FONT> <span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- Boton de contacto-->
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link"  [routerLink]="['contacto']"><FONT SIZE=5> Contáctanos</FONT> <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline" >
+        <button mat-raised-button *ngIf="_cs.usuario.uid" style="background-color: #f5ff3d" (click)="_cs.logout()">
+           <FONT SIZE=3>Cerrar sesión</FONT>
+       </button>
+     </form>
+
+     <app-log *ngIf="!_cs.usuario.uid"></app-log>
+    </div>
+  </nav>

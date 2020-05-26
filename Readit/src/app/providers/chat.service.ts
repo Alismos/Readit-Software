@@ -23,7 +23,6 @@ export class ChatService {
       this.usuario.nombre = user.displayName;
       this.usuario.uid = user.uid;
     })
-
  }
 
   login() {
@@ -33,6 +32,8 @@ export class ChatService {
 
 
   logout() {
+    this.usuario = {};
     this.afAuth.auth.signOut();
+    window.location.reload();
   }
 }

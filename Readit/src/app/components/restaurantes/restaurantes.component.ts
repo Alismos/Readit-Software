@@ -18,7 +18,7 @@ export class RestaurantesComponent implements OnInit {
    }
   ngOnInit(): void {
   }
-  
+
   share() {
     window.alert('The product has been shared!');
   }
