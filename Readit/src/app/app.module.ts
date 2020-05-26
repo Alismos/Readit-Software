@@ -1,3 +1,4 @@
+import { ChatService } from './services/chat.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,7 +12,6 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ChatService } from './providers/chat.service';
 
 // Importando servicio
 import { ConexionService } from './services/conexion.service';
