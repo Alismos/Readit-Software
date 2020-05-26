@@ -35,7 +35,7 @@ import { ArticulosComponent } from './components/articulos/articulos.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { LogComponent } from './components/log/log.component';
 import { HeaderComponent } from './components/header/header.component';
-import { RegisterComponent } from './components/user/register/register.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +50,6 @@ import { RegisterComponent } from './components/user/register/register.component
     CarritoComponent,
     LogComponent,
     HeaderComponent,
-    RegisterComponent,
   ],
   imports: [
     BrowserModule,
