@@ -35,6 +35,7 @@ import { ArticulosComponent } from './components/articulos/articulos.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { LogComponent } from './components/log/log.component';
 import { HeaderComponent } from './components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { HeaderComponent } from './components/header/header.component';
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    approuting
+    approuting,
+    BrowserAnimationsModule
   ],
   providers: [
               ConexionService,
