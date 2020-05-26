@@ -11,7 +11,8 @@ export class ListaComponent implements OnInit {
   items: any;
   editarItem: any = {
     Name: '',
-    Age: ''
+    Age: '',
+    Local:''
   };
 
   constructor(private conexion: ConexionService) {

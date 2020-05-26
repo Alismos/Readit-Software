@@ -12,7 +12,8 @@ items: any;
 
 pedido: any = {
   Name: '',
-  Age: 0
+  Age: 0, 
+  Local: ''
 };
   constructor(private carritoService: CarritoService, private conexion: ConexionService) { }
 
@@ -23,6 +24,7 @@ pedido: any = {
     this.conexion.agregarItem(this.pedido);
     this.pedido.Name = '';
     this.pedido.Age = 0;
+    this.pedido.Local = '';
     this.items = this.carritoService.cleanCart();
     console.warn('Your order has been submitted', this.pedido.Name);
 

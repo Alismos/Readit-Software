@@ -1,11 +1,15 @@
 <div class="alert alert-warning" role="alert" *ngFor="let item of items">
-    {{item.Name}}{{item.Age}} ------ {{item.id}}
-    <div class="float-right" (click)="eliminar(item)">
-        <i class="far fa-trash-alt"></i>
-    </div>
-    <div class="float-right mx-3" (click)="editar(item) " data-toggle="modal" data-target="#exampleModal">
-        <i class="far fa-edit"></i>
-    </div>
+  <div class="float-right" (click)="eliminar(item)">
+    <i class="far fa-trash-alt"></i>
+  </div> 
+  <div class="float-right mx-3" (click)="editar(item) " data-toggle="modal" data-target="#exampleModal">
+    <i class="far fa-edit"></i>
+  </div>
+  <div id="info">
+    <p>Dueño del pedido: {{item.Name}}</p>
+    <p>Edad del dueño: {{item.Age}}</p>
+    <p>Local al que se debe entregar: {{item.Local}}</p>
+  </div>
 </div>
 
 <!-- Modal -->
@@ -28,6 +32,10 @@
                 type="number" placeholder="Ingresa tu Edad" 
                 name="Age" class="form-control"
                 [(ngModel)] = "editarItem.Age">
+                <input
+                type="text" placeholder="Ingresa tu Local"
+                name="Local" class="form-control"
+                [(ngModel)] = "editarItem.Local">
                 <button class="btn btn-warning mt-3" type="submit">
                     Agregar
                 </button>
