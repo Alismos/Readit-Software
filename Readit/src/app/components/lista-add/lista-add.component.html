@@ -1,12 +1,19 @@
 <form (ngSubmit)="agregar()" >
+    <h3>Nombre</h3>
     <input 
     type="text" placeholder="Ingresa tu nombre" 
     name="Name" class="form-control"
     [(ngModel)] = "item.Name">
+    <h3>Edad</h3>
     <input 
     type="number" placeholder="Ingresa tu Edad" 
     name="Age" class="form-control"
     [(ngModel)] = "item.Age">
+    <h3>Local</h3>
+    <input
+    type="text" placeholder="Ingresa tu dirección"
+    name="Local" class="form-control"
+    [(ngModel)] = "item.Local">
     <button class="btn btn-warning mt-3" type="submit">
         Agregar
     </button>

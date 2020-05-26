@@ -10,7 +10,8 @@ export class ListaAddComponent implements OnInit {
 
   item: any = {
     Name: '',
-    Age: 0
+    Age: 0,
+    Local: ''
   };
   constructor(private servicio: ConexionService) { }
 
@@ -21,6 +22,7 @@ export class ListaAddComponent implements OnInit {
     this.servicio.agregarItem(this.item);
     this.item.Name = '';
     this.item.Age = 0;
+    this.item.Local = '';
   }
 
 }

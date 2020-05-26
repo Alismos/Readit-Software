@@ -14,15 +14,20 @@
           </a>
           
     </h3>
-    <span>{{articulo.precio}}</span>
-    <style>
-      #imageDiv {
-        margin-right: 40px;
-        width: 100px;
-        height: 100px;
-        float: left;
-      }
-    </style>
+    <span>Precio: {{articulo.precio}} COP</span>
    
-    <button (click)="addToCart(articulo)">Comprar</button>    
+    <button id="bComprar" (click)="addToCart(articulo)">Comprar</button>    
  </div>
+
+ <style>
+  #imageDiv {
+    margin-right: 40px;
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+
+  #bComprar{
+    margin-left: 10px;
+  }
+</style>
