@@ -63,8 +63,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    approuting,
-    BrowserAnimationsModule
+    approuting
   ],
   providers: [
               ConexionService,
