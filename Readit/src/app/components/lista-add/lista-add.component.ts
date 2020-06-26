@@ -8,10 +8,11 @@ import { ConexionService } from 'src/app/services/conexion.service';
 })
 export class ListaAddComponent implements OnInit {
 
+  
   item: any = {
     Name: '',
     Age: 0,
-    Local: ''
+    Local: '',
   };
   constructor(private servicio: ConexionService) { }
 

@@ -12,7 +12,9 @@ export class ListaComponent implements OnInit {
   editarItem: any = {
     Name: '',
     Age: '',
-    Local:''
+    Local:'',
+    Total:'',
+    Articulos: ''
   };
 
   constructor(private conexion: ConexionService) {

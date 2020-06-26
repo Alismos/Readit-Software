@@ -22,7 +22,9 @@
     }
   </style>
 </div>
-
+<div class="p-3 mb-2 bg-warning text-dark">
+  <h1> Valor total de transaccion: {{price | currency}} COP </h1>
+</div>
 <form (ngSubmit)="agregar()">
     <input 
     type="text" placeholder="Ingresa tu nombre" 
